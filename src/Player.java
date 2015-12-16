@@ -44,7 +44,6 @@ public class Player {
 
         }while(hp>0 && hpe>0);
 
-
         //controllo fine combattimento
         if(hp<0)
             gameOver();
@@ -53,15 +52,16 @@ public class Player {
 
 
     //metodo di gameover per la morte del giocatore
-    public void gameOver(){
-        System.out.printf("%s fa ciao ciao con la manina al mondo dei vivi",nome);
-    }
+    public void gameOver(){System.out.printf("%s fa ciao ciao con la manina al mondo dei vivi",nome);}
 
     //metodo in caso di vittoria
     public void victory(int expe) {
-        exp+=expe;                  //aggiunta punti exp
+        //aggiunta punti exp
+        exp+=expe;
         System.out.printf("Il nemico è stato sconfitto!! %s ha guadagnato %d punti esperienza! %n",nome,expe);
-        while(exp>expnext){               //controllo esperienza, in caso sale di livello il giocatore
+
+        //controllo esperienza, in caso sale di livello il giocatore
+        while(exp>expnext){
             lvl++;
             expnext+=50;
             System.out.printf("%s sale di livello! Livello Attuale: %d, Exp rimanente per il prossimo liv: %d %n",
@@ -71,7 +71,6 @@ public class Player {
 
 
     //setter e getter qua sotto
-
     public void setNome(String nome) {
         this.nome = nome;
     }
