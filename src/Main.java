@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        //prova 25
+        //prova
         Menù game = new Menù();
         game.start();
     }
