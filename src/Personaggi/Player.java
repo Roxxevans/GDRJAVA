@@ -1,11 +1,14 @@
 package Personaggi;
 
+import Stanze.Stanza;
+
 public class Player {
 
-   protected String nome="";                              //nome giocatore
-   protected int hp,sp,atk,def,expnext;     //healthpoints,skillpoints,attacco,difesa,esperienza,esperienza per il lvlup,livello
-   protected int exp=0;
-   protected int lvl=1;
+    protected String nome="";                              //nome giocatore
+    protected int hp,sp,atk,def,expnext;     //healthpoints,skillpoints,attacco,difesa,esperienza,esperienza per il lvlup,livello
+    protected int exp=0;
+    protected int lvl=1;
+    private Stanza posizione;
 
     public Player(String nome){
         this.nome=nome;
