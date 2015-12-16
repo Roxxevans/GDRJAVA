@@ -16,7 +16,7 @@ public class Player {
         atk=1;
         def=5;
         exp=0;
-        expnext=50;
+        expnext=20;
         lvl=1;
     }
 
@@ -32,25 +32,16 @@ public class Player {
         System.out.printf("Appare un %s!!, inizio fase di combattimento!! %s, RIMANI DETERMINATO!! %n%n",e.getNome(),nome);
         //inizio combattimento
         do{
-            if(defe>atk) {           //inizio calcolo danno inflitto al nemico
-                dmg = 1;
-                hpe -= dmg;
-            }
-            else{
-                dmg=atk-defe;
-                hpe-=dmg;
-            }
+            //danno calcolo inflitto dal giocatore al mostro
+            if(defe>atk) hpe-=dmg=1;
+            else hpe-=dmg=atk-defe;
             System.out.printf("%s Ha inflitto %d a %s %n", nome,dmg,e.getNome());
 
-            if(def>atke) {          //inizio calcolo danno inflitto al giocatore
-                dmg = 1;
-                hp-=dmg;
-            }
-            else{
-                dmg=atke-def;
-                hp-=dmg;
-            }
+            //danno calcolo inflitto dal mostro al giocatore
+            if(def>atke) hp-=dmg=1;
+            else hp-=dmg=atke-def;
             System.out.printf("%s Ha inflitto %d a %s %n", e.getNome(),dmg,nome);
+
         }while(hp>0 && hpe>0);
 
 
@@ -73,7 +64,7 @@ public class Player {
         while(exp>expnext){               //controllo esperienza, in caso sale di livello il giocatore
             lvl++;
             expnext+=50;
-            System.out.printf("%s sale di livello! Livello Attuale: %d, Exp rimanente per il prossimo liv: %d",
+            System.out.printf("%s sale di livello! Livello Attuale: %d, Exp rimanente per il prossimo liv: %d %n",
                     nome, lvl, (exp - expnext));
         }
     }
