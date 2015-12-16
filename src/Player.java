@@ -16,7 +16,7 @@ public class Player {
         atk=1;
         def=5;
         exp=0;
-        expnext=30;
+        expnext=50;
         lvl=1;
     }
 
@@ -70,15 +70,18 @@ public class Player {
     public void victory(int exp) {
         this.exp=+exp;                  //aggiunta punti exp
         System.out.printf("Il nemico è stato sconfitto!! %s ha guadagnato %d punti esperienza! %n",nome,exp);
+        lvlup();
+    }
+
+    public void lvlup(){
         if (exp>expnext){               //controllo esperienza, in caso sale di livello il giocatore
             lvl++;
             expnext=+30;
             System.out.printf("%s sale di livello! Livello Attuale: %d, Exp rimanente per il prossimo liv: %d",
                     nome,lvl,(exp-expnext));
+            lvlup();
         }
-
     }
-
 
 
     //setter e getter qua sotto
