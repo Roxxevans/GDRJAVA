@@ -67,12 +67,12 @@ public class Player {
     }
 
     //metodo in caso di vittoria
-    public void victory(int exp) {
-        this.exp=+exp;                  //aggiunta punti exp
-        System.out.printf("Il nemico è stato sconfitto!! %s ha guadagnato %d punti esperienza! %n",nome,exp);
+    public void victory(int expe) {
+        exp+=expe;                  //aggiunta punti exp
+        System.out.printf("Il nemico è stato sconfitto!! %s ha guadagnato %d punti esperienza! %n",nome,expe);
         while(exp>expnext){               //controllo esperienza, in caso sale di livello il giocatore
             lvl++;
-            expnext=+50;
+            expnext+=50;
             System.out.printf("%s sale di livello! Livello Attuale: %d, Exp rimanente per il prossimo liv: %d",
                     nome, lvl, (exp - expnext));
         }
