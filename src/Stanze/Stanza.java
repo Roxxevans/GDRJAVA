@@ -1,9 +1,8 @@
 package Stanze;
 import Personaggi.Player;
 
-public abstract class Stanza {
+public interface Stanza {
 
-    public void warp(Player p){};
-
+    public void warp(Player p);
 
 }

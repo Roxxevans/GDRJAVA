@@ -8,7 +8,7 @@ public class Player {
     protected int hp,sp,atk,def,expnext;     //healthpoints,skillpoints,attacco,difesa,esperienza,esperienza per il lvlup,livello
     protected int exp=0;
     protected int lvl=1;
-    private Stanza posizione;
+    private Stanza location;
 
     public Player(String nome){
         this.nome=nome;
@@ -106,5 +106,9 @@ public class Player {
 
     public void setExpnext(int expnext) {
         this.expnext = expnext;
+    }
+
+    public void setLocation(Stanza location) {
+        this.location = location;
     }
 }
