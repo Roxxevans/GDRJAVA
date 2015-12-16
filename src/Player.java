@@ -65,7 +65,7 @@ public class Player {
             lvl++;
             expnext+=50;
             System.out.printf("%s sale di livello! Livello Attuale: %d, Exp rimanente per il prossimo liv: %d %n",
-                    nome, lvl, (exp - expnext));
+                    nome, lvl, (expnext-exp));
         }
     }
 
