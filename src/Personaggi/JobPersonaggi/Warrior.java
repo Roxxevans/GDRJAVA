@@ -9,7 +9,7 @@ public class Warrior extends Player{
         super(nome);
         hp=50;
         sp=0;
-        atk=10;
+        atk=20;
         def=10;
         expnext=70;
     }

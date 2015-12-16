@@ -13,8 +13,8 @@ public class Enemy {
    //costruttore nemico, per ora i valori sono fixati a questo perchè non ho un database di mostri, li farò XD
     public Enemy() {
         nome = "mostroGENERICO";
-        hp = 20;
-        atk = 1;
+        hp = 18;
+        atk = 8;
         def = 2;
         exp =100;
 

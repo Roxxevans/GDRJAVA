@@ -9,7 +9,7 @@ public class Thief extends Player{
         super(nome);
         hp=10;
         sp=0;
-        atk=5;
+        atk=1;
         def=5;
         expnext=10;
     }
