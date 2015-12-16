@@ -13,7 +13,7 @@ public class Player {
         nome=name;
         hp=30;
         sp=10;
-        atk=1;
+        atk=5;
         def=5;
         exp=0;
         expnext=20;
@@ -64,9 +64,9 @@ public class Player {
         while(exp>expnext){
             lvl++;
             expnext+=50;
-            System.out.printf("%s sale di livello! Livello Attuale: %d, Exp rimanente per il prossimo liv: %d %n",
-                    nome, lvl, (expnext-exp));
         }
+        System.out.printf("%s sale di livello! Livello Attuale: %d, Exp rimanente per il prossimo liv: %d %n",
+                nome, lvl, (expnext-exp));
     }
 
 
