@@ -2,21 +2,14 @@ package Personaggi;
 
 public class Player {
 
-   private String nome;                              //nome giocatore
-   private int hp,sp,atk,def,exp,expnext,lvl;        //healthpoints,skillpoints,attacco,difesa,esperienza,esperienza per il lvlup,livello
-   //private PlClass plclass;                        //classe giocatore (Guerriero, mago, ladro) (da implementare)
-   //private Skills skills;                          //lista abilità personaggio  (da implementare)
+   protected String nome="";                              //nome giocatore
+   protected int hp,sp,atk,def,expnext;     //healthpoints,skillpoints,attacco,difesa,esperienza,esperienza per il lvlup,livello
+   protected int exp=0;
+   protected int lvl=1;
 
-
-
-    //visto che le classi del giocatore sono ancora da fare il costruttore metterà solo il nome
-    //in futuro gli hp etc verranno dati dalla classe giocatore, exp sarà sempre inizializzata a 0 e lvl a 1
-    public Player(String name){
-        nome=name;
-        expnext=20;
-        lvl=1;
+    public Player(String nome){
+        this.nome=nome;
     }
-
 
     public void fight(Enemy e){
         //inizializzo tutte le variabili del nemico
@@ -94,5 +87,21 @@ public class Player {
 
     public int getDef() {
         return def;
+    }
+
+    public void setSp(int sp) {
+        this.sp = sp;
+    }
+
+    public void setAtk(int atk) {
+        this.atk = atk;
+    }
+
+    public void setDef(int def) {
+        this.def = def;
+    }
+
+    public void setExpnext(int expnext) {
+        this.expnext = expnext;
     }
 }
