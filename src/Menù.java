@@ -13,8 +13,6 @@ public class Menù {
 
         System.out.println("Pronto per partire con un combattimento? premi s e invio quando lo sei..");
         if (scelta(scanner.next())) p.fight(e);
-
-
     }
 
 
