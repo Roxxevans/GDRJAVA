@@ -1,3 +1,5 @@
+package Personaggi;
+
 public class Enemy {
 
     //per prova del combattimento esisterà un solo tipo di nemico, più avanti pescherà gli attributi da un database

@@ -1,3 +1,5 @@
+package Personaggi;
+
 public class Player {
 
    private String nome;                              //nome giocatore
@@ -11,11 +13,6 @@ public class Player {
     //in futuro gli hp etc verranno dati dalla classe giocatore, exp sarà sempre inizializzata a 0 e lvl a 1
     public Player(String name){
         nome=name;
-        hp=30;
-        sp=10;
-        atk=5;
-        def=5;
-        exp=0;
         expnext=20;
         lvl=1;
     }
@@ -86,7 +83,6 @@ public class Player {
     public void setHp(int hp) {
         this.hp = hp;
     }
-
 
     public int getHp() {
         return hp;
